@@ -23,17 +23,17 @@ data "aws_availability_zones" "azs" {}
 #####
 
 resource "aws_vpc" "main" {
-  cidr_block           = "${var.vpc_supernet}"
-  enable_dns_hostnames = "${var.enable_public_dns_hostnames && var.enable_vpc_dns ? "true" : "false"}"
-  enable_dns_support   = "${var.enable_vpc_dns ? "true" : "false"}"
+  cidr_block           = var.vpc_supernet
+  enable_dns_hostnames = var.enable_public_dns_hostnames && var.enable_vpc_dns ? "true" : "false"
+  enable_dns_support   = var.enable_vpc_dns ? "true" : "false"
 
   tags = "${merge(
     local.common_tags,
     map(
-      "Name", "${local.local_vpc_name}",
+      "Name", local.local_vpc_name",
       "DataClassification", "confidential",
       "PubliclyAccessible", "false",
-      "app_tag","${var.app_tag}"
+      "app_tag",var.app_tag"
       )
       )}"
 }
