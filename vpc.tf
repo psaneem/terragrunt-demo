@@ -1,8 +1,8 @@
 locals {
   common_tags {
-    "Vertical"      = "${var.tag_vertical}"
-    "Application"   = "${var.tag_application}"
-    "Environment"   = "${var.tag_environment}"
+    Vertical      = var.tag_vertical
+    Application   = "var.tag_application
+    Environment   = var.tag_environment
     "ProvisionedBy" = "terraform"
   }
 
