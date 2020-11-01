@@ -1,4 +1,4 @@
-als {
+locals {
   common_tags {
     "Vertical"      = "${var.tag_vertical}"
     "Application"   = "${var.tag_application}"
