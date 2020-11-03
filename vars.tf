@@ -1,3 +1,0 @@
-variable "cidrs" {
-    type = string
-} 
