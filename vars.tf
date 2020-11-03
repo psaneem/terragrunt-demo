@@ -1,3 +1,3 @@
-variable "vpc_supernet" {
+variable "cidr" {
     type = string
 } 
