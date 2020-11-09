@@ -1,4 +1,4 @@
 variable "cidr" {
 type = string
-default = ""
+default = "9.0.0.0/24"
 }
