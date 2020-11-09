@@ -10,8 +10,8 @@ terraform {
 }
 
 provider "aws" {
-    #region = "${local.aws_region}"
-    region = "us-east-1"
+    region = "${local.aws_region}"
+    #region = "us-east-1"
     }
 
 
